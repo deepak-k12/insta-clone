@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram</title>
+</head>
+
+<style type="text/css">
+
+#img1{
+		height:550px;
+		width:530px;
+		position: absolute;
+	}
+
+
+#img2{
+		
+		height:550px;
+		width:290px;
+		position: absolute;
+		margin-left: 200px;
+		margin-top: 10px;
+		}
+
+#slide1{
+		height:440px;
+		width:260px;
+		position: absolute;
+		margin-left: 215px;
+		margin-top: 60px;
+}
+
+.div1{
+	margin-top: 50px;
+	margin-left: 150px;
+}
+
+.loginbox{
+	height: 400px;
+	width: 300px;
+	margin-left: 680px;
+	border: 1px solid grey;
+	text-align: center;
+	background-color: white;
+}
+
+.signupbox{
+	height: 50px;
+	width: 300px;
+	margin-top: 70px;
+	border: 1px solid grey;
+	text-align: center;
+	background-color: white;
+}
+
+#btn{
+	width: 250px; 
+	background-color: rgba(var(--fe0,0,55,107),1);
+	padding: 5px;
+	border-radius: 3px;
+	color: white;
+}
+
+
+
+</style>
+
+<body style="background-color: whitesmoke">
+<div class="div1">
+<img src="img2.png" id="img1">
+<img src="img1.png" id="img2">
+<img src="slide1.jpg" id="slide1" class="sl">
+<img src="slide2.jpg" id="slide1" class="sl">
+<img src="slide3.jpg" id="slide1" class="sl">
+<img src="slide4.jpg" id="slide1" class="sl">
+</div>
+
+<div class="loginbox">
+	<img src="insta.png" width="60%" style="padding-top: 20px;padding-bottom: 20px">
+	<input type="text" name="" placeholder="phone number, username or email">
+	<p></p>
+	<input type="text" name="" placeholder="password">
+	<p></p>
+	<button id="btn">Log In</button>
+
+	<div style="width: 80%; height: 10px; border-bottom: 1px solid grey; text-align: center;margin-left: 30px;margin-top: 20px;">
+  <b><span style="font-size: 15px; background-color: #F3F5F6; padding: 0 10px; color: grey">
+    OR
+  </span></b>
+</div>
+<div>
+	<img src="facebook.png" width="6%" style="margin-top: 40px;">&nbsp;
+	<b><a style="color: rgba(var(--fe0,0,55,107),1);font-size: 16px">Log in with Facebook</a></b>
+	<br>
+	<br>
+	<p style="font-size: 13px;color: rgba(var(--fe0,0,55,107),1);">Forgot Password?</p>
+</div>
+<div class="signupbox">
+	<p>Don't have an account? <b><a style="color: rgba(var(--fe0,0,55,107),1)"> Sign up</a></b></p>
+</div>
+<p>Get the app</p>
+<img src="store1.png" width="90%" style="padding-top: 0px">
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("sl");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
